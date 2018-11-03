@@ -8,6 +8,24 @@ faster(({ ctx, width, height }) => {
 });
 ```
 
+## Getting started
+
+Npm install:
+
+```bash
+npm install faster-faster
+```
+
+```js
+import faster from 'faster-faster';
+```
+
+CDN:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/faster-faster"></script>
+```
+
 Will do:
 
 - Change the width and height appropriately on window resize.
