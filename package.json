@@ -1,0 +1,29 @@
+{
+  "name": "faster-faster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup faster.js --name faster --output.format umd | uglifyjs -o faster.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscop/faster.git"
+  },
+  "keywords": [],
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franciscop/faster/issues"
+  },
+  "homepage": "https://github.com/franciscop/faster#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^23.5.0",
+    "jest-fetch-mock": "^1.6.6",
+    "uglify-es": "^3.3.9"
+  }
+}
