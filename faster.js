@@ -24,7 +24,7 @@ export default (selector = 'canvas', cb) => {
   const redraw = () => {
     const time = (new Date() - start) / 1000;
     ctx.putImageData(data, 0, 0);
-    cb({ canvas, ctx, start, time, width, height, index }, primitives);
+    cb({ canvas, ctx, start, time, width, height, index });
     index++;
     requestAnimationFrame(redraw);
   };

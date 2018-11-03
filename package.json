@@ -1,8 +1,8 @@
 {
   "name": "faster-faster",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Tiny function to repaint into a canvas",
+  "main": "faster.min.js",
   "scripts": {
     "build": "rollup faster.js --name faster --output.format umd | uglifyjs -o faster.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
