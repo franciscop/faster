@@ -1,6 +1,6 @@
 {
   "name": "faster-faster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny function to repaint into a canvas",
   "main": "faster.min.js",
   "scripts": {
