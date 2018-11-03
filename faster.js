@@ -11,8 +11,8 @@ export default (selector = 'canvas', cb) => {
   let data;
 
   const size = () => {
-    canvas.width = document.body.clientWidth;
-    canvas.height = document.body.clientHeight;
+    canvas.width = Math.floor(document.body.clientWidth);
+    canvas.height = Math.floor(document.body.clientHeight);
     width = canvas.width;
     height = canvas.height;
     data = ctx.getImageData(0, 0, width, height);

@@ -30,7 +30,7 @@ Will do:
 
 - Change the width and height appropriately on window resize.
 - Use `requestAnimationFrame` so that it slows down when the tab is not visible.
--
+- Clear the canvas between repaints.
 
 Properties:
 
@@ -56,4 +56,27 @@ canvas {
   background: black;
   display: block;
 }
+```
+
+
+Tip: making helpers for easier painting:
+
+```js
+const primitives = ctx => ({
+  arc: (x, y, size, options) => {
+    ctx.beginPath();
+    ctx.arc(x, y, size, 0, 2 * Math.PI);
+    for (let key in options) {
+      ctx[key] = options[key];
+    }
+    if (options.fillStyle) ctx.fill();
+    if (options.strokeStyle || options.lineWidth) ctx.stroke();
+  }
+});
+
+faster(({ ctx }) => {
+  const { arc } = primitives(ctx);
+
+  arc(10, 10, 10);
+});
 ```
